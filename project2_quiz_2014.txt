@@ -1,0 +1,51 @@
+----------------------------------------------
+Name: Emma Marriott
+SUNet: em073094	
+Discussed Assignment With: Isabella Smythe, Katie-Rose Skelly
+----------------------------------------------
+
+1a. Write pseudocode for knn with n-fold validation in README.txt
+
+1b. Write pseudocode for k-means in README.txt 
+
+2a. Save output as knn.out.k (6 files total)
+
+2b. Save image as "question2.jpg"
+
+3. Although clustering sensitivity seems to be consistently high throughout all k values,
+both specificity and accuracy decrease with an increasing k value. This is expected: as you increase your range for neighbors, specificity and accuracy are compromised because the prediction is no longer limited/specific to a local area. 
+
+4. Using p=0.5 and after running the program 5 times for each k = 5,10,20,30, there were only three false negatives (i.e. an ALL patient misclassified as a AML patient) total: patient 21, 27 (k=10), and patient 33 (k=20).
+
+5. Save image as "question5.jpg"
+
+6. The clustering sensitivity starts at 1.0 and slightly decreases as p increases while the clustering specificity follows the opposite trend, steadily increasing as p increases (as illustrated by question5.jpg). Intuitively, having a low threshold (p-value) for labelling positives will increase false positives and decrease false negatives, which decreases specificity and increases sensitivity. Conversely, having a high threshold for labelling positives will decrease false positives and increase false negatives, which increases specificity and decreases sensitivity.
+Clustering accuracy increases as p increases, peaks around p=0.5, and then decreases as p approaches 1 (illustrated by extra_output/p_vs_accuracy.jpg). This trend accurately reflects the aforementioned tradeoff between sensitivity and specificity.
+
+7a. Save output as kmeans_testdata.out
+
+7b. Save image as "question7.jpg"
+
+8. Save output as kmeans_experimental.out  
+
+9a. Yes, all ribosomal genes (from 2347 on) are classified in the same cluster.
+
+9b. 0.0%, 18.7%
+
+10.
+
+run 1. 859, 740: 21.5%, 0.0%
+run 2. 1790, 2131: 0.0%, 18.7%
+run 3. 329, 248: 0.0%, 18.7%
+run 4. 2096, 1580: .1%, 20.6%
+run 5. 88, 2248: 0.0%, 18.7%
+
+11a. The primary differences between the tests run in question 8 and 9 are: 1)the difference in number of clusters (3 vs. 2 clusters), and 2)the choice of initial centroids. For the first difference, the clustering assignments change drastically when we add a cluster, as the third cluster is likely to pull away points from the original two clusters. Second, we chose the first and last gene as the initial centroid in question 9. This biases which groups will cluster; in question 9, by choosing the last gene as an initial centroid, there is a high probability that this centroid will form a very tight cluster of ribosomal genes, as the last gene is a ribosomal gene. 
+
+11b. We know that how many centroids we choose, as well as which initial centroids, has a significant impact on the cluster results.
+
+12a. Gene #2467 is the only gene that does not always cluster with the rest of the ribosomal genes
+
+12b. For all 20 runs, EFB1 identified in the same cluster as a majority of the ribosomes
+
+12c. Translation elongation factor EFB1 serves to bind tRNA to its respective ribosomal site. Because this factor interacts closely with ribosomal genes and is involved in the same processes with ribosomal genes, the expression level of EFB1 will correspond to that of the ribosomal genes.
